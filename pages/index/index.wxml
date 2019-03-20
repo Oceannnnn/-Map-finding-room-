@@ -1,0 +1,53 @@
+<view class='page pr'>
+  <image src="../../images/yin/bg.jpg" class="slide_bg"/>
+  <view wx:for="{{swiper_item}}" wx:key="{{itemName}}" wx:for-item="itemName" wx:for-index="idx" class='itmes' hidden="{{hoverIndex === idx?'':'hidden'}}">
+    <view class='pr flex_fa' hidden='{{idx === 0 ?"":"hidden"}}'>
+      <image src='../../images/yin/tou.png' class='tou'></image>
+      <image src='../../images/yin/go.png' class='body' animation="{{animationMiddleHeaderItem}}" bindtap='go'></image>
+      <image src='../../images/yin/footer.png' class='footer'></image>
+    </view>
+    <view class='pr' hidden='{{idx === 0 ?"hidden":""}}'>
+      <image src='../../images/yin/ti_bg.png' class='ti_bg'></image>
+      <view class='ti_body'>
+        <view class='p'>
+          <view class='title f_32'>{{idx}}、{{itemName.title}}<text wx:if="{{itemName.type == 1}}">(单选)</text><text wx:else>(多选)</text></view>
+          <view class='answer_body mt_20'>
+            <radio-group bindchange="radioChange" data-value="{{value}}" wx:if="{{itemName.type == 1}}">
+              <label class="answer_item radio flex_i f_30" wx:for="{{itemName.option}}" wx:key="{{item}}" wx:for-item="item">
+                <radio class='mr_20' value="{{item.id}}" checked="{{item.checked}}"/>{{item.title}}
+              </label>
+            </radio-group>
+            <checkbox-group bindchange="checkboxChange" wx:if="{{itemName.type == 2}}">
+              <label class='answer_item flex_i f_30' wx:for="{{itemName.option}}" wx:key="{{item}}" wx:for-item="item">
+                  <checkbox class='mr_20' value="{{item.id}}" checked="{{item.checked}}"></checkbox>
+                  <view>{{item.title}}</view>  
+              </label>   
+            </checkbox-group>
+          </view>
+        </view>
+        <view class="flex_ja p body_btn">
+          <view class='item_btn p'>
+            <image src='../../images/yin/3.png'></image>
+            <view class='text' bindtap='result' wx:if="{{idx === swiper_item.length - 1}}" data-text_id="{{itemName.id}}" data-id='{{value}}'>查看结果</view>
+            <view class='text' bindtap='next' wx:else data-text_id="{{itemName.id}}" data-id='{{value}}'>下一题</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='result p flex_fa' hidden='{{!hidden}}'>
+    <image src='{{image}}' class='result_tou'></image>
+    <view class="flex_ja p result_btn">
+      <view class='item_btn p'>
+        <image src='../../images/yin/2.png'></image>
+        <view class='text' bindtap='again'>再测一次</view>
+      </view>
+      <view class='item_btn p' bindtap='preservation'>
+        <image src='../../images/yin/3.png'></image>
+        <view class='text'>保存图片</view>
+        <!-- <button bindtap='preservation' class='preservation'></button> -->
+      </view>
+    </view>
+  
+  </view>
+</view>

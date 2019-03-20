@@ -1,0 +1,45 @@
+<!--pages/secondHand/secondHand.wxml-->
+<!-- <view class='bor_t flex_i' > 
+  <view class='m_location flex_i'>
+    <image src='../../images/location.png' class='ml_20'></image>
+    {{location}}
+  </view>
+  <view class='i_header' bindtap='location'>
+    <view class='i_search flex_ja c_999'>
+      <image src='../../images/search.png'></image>
+      <view>您想住哪儿？</view>
+    </view>
+  </view>
+  <view class='m_location' bindtap='selectionType' data-id="{{village}}" data-type="{{type}}">筛选</view>
+</view> -->
+
+
+<view class='map-wrap'>
+  <map id='map' class='{{map}}' latitude="{{latitude}}" longitude="{{longitude}}" markers="{{markers}}" scale="{{scale}}" bindmarkertap="bindmarkertap" bindregionchange="bindregionchange">
+    <cover-view wx:if="{{type==1}}" class='best_broker broker{{itemName.rank}} flex_i' animation="{{itemName.animationData}}" wx:for="{{brokerList}}" wx:key="{{itemName}}" wx:for-item="itemName">
+      <cover-image src='../../images/bg.png' class='bg'></cover-image>
+      <cover-view class='best_left' bindtap='bestBroker_show' data-on="{{itemName.on}}" data-id='{{itemName.rank}}'>
+        <cover-image class='broker_icon' src='{{itemName.image}}' bindtap='broker' show-location/>
+        <cover-image class='best_icon' src='../../images/best{{itemName.rank}}.png'></cover-image>
+      </cover-view>
+      <cover-view class='m_l flex_i best_right' data-id='{{itemName.id}}' bindtap='toBestBroker'>
+        <cover-view>
+          <cover-view class='flex_i'>
+            {{itemName.nick}}
+            <cover-view class='c_6f8 m_l'>经纪人</cover-view>
+          </cover-view>
+          <cover-view class='flex_i mt_10 c_999'>
+            服务效率
+            <cover-view class='c_ea5 m_l'>{{itemName.service}}</cover-view>
+          </cover-view>
+        </cover-view>
+        <cover-image class="arrow m_l" src="../../images/last_Dawn.png"></cover-image>
+      </cover-view>
+    </cover-view>
+    <!-- <cover-image class='map-icon_user' src='../../images/xuan.png' bindtap='toUser'/> -->
+  </map>
+</view>
+<view class='footer f_32 flex_ja' bindtap='selectionType' data-id="{{village}}" data-type="{{type}}">
+  <image src='../../images/xuan.png' class='foot_img mr_20'></image>
+  条件筛选
+</view>

@@ -1,0 +1,16 @@
+<!--pages/location/location.wxml-->
+<view class='n_location bor_t'>
+  <view class='p_20'>
+    我的位置
+  </view>
+  <view class='bg_f p_20 flex_cb'>
+    <view class='flex_i'>
+      <image src='../../images/location.png' class='mr_10'></image>
+      定位为：{{location}} 
+    </view>
+    <image src='../../images/shua.png' class='shua' bindtap='location'></image>
+  </view>
+</view>
+<view class='wrapper'> 
+  <list-html data="{{city}}" search="{{value}}"></list-html>
+</view> 

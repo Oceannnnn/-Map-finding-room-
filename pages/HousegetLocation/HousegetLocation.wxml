@@ -1,0 +1,9 @@
+<!--pages/HousegetLocation/HousegetLocation.wxml-->
+<view class='flex_af page p_40'>
+  <image src='../../images/huan.png'></image>
+  <view class='ti'>提示</view>
+  <view class='mt_20 c_999 f_32 wubi'>请你务必允许我们获取你的地址位置权限，以便给您提供更好的用户体验</view>
+  <button class='s_foot mb_20' bindtap='userLocation' wx:if="{{!userLocation}}">确认</button>
+  <button class='s_foot mb_20' open-type="openSetting" bindopensetting="confirm" wx:else>确认</button>
+  <button class='s_foot' type="default" bindtap='cancel'>取消</button>
+</view>

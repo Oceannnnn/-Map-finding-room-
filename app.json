@@ -1,0 +1,51 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/main/main",
+    "pages/selectionType/selectionType",
+    "pages/details/details",
+    "pages/roomDetails/roomDetails",
+    "pages/complaint/complaint",
+    "pages/complaintDetails/complaintDetails",
+    "pages/collection/collection",
+    "pages/mapHouse/mapHouse",
+    "pages/recommend/recommend",
+    "pages/villageDetails/villageDetails",
+    "pages/report/report",
+    "pages/brokerInformation/brokerInformation",
+    "pages/my/my",
+    "pages/location/location",
+    "pages/HousegetLocation/HousegetLocation",
+    "pages/about/about"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color":"#999",
+    "backgroundColor":"#fff",
+    "selectedColor":"#6F81BA",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "未来的你",
+        "iconPath":"images/yinliu.png",
+        "selectedIconPath": "images/yinliu_active.png"
+      },
+      {
+        "pagePath": "pages/main/main",
+        "text": "地图找房",
+        "iconPath": "images/room.png",
+        "selectedIconPath": "images/room_active.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "images/my.png",
+        "selectedIconPath": "images/my_active.png"
+      }
+    ]
+  }
+}

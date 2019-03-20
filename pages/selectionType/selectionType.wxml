@@ -1,0 +1,17 @@
+<!--pages/selectionType/selectionType.wxml-->
+<view class='p_20'>
+  <view wx:for="{{checkboxList}}" wx:key="{{itemName}}" wx:for-item="itemName">
+    <view class='p_20 f_32'>{{itemName.name}}</view>
+    <view class='flex_f'>
+      <view class="item {{item.checked?'active':''}} f_32" wx:for="{{itemName.item}}" wx:key="{{item}}" wx:for-item="item" data-item_id='{{itemName.id}}' data-id='{{item.id}}' bindtap='bindchange'>
+        <image src='../../images/gou.png' class="gou {{item.checked?'':'active'}}"></image>
+        <text class='f_28'>{{item.value}}</text>
+      </view>
+    </view>
+
+  </view>
+  <view class='flex_i footer'>
+    <view class='cancel' bindtap='cancel'>清空</view>
+    <view bindtap='confirm' class='confirm b_6f8'>确认</view>
+  </view>
+</view>

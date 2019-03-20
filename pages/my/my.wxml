@@ -1,0 +1,33 @@
+<!--pages/my/my.wxml-->
+<view class="my-wrap">
+    <view class="top-info b_6f8 f_32 p_40 flex_fa">
+        <button wx:if="{{!s_hasUserInfo}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" class='mb_20'>请登录</button>
+        <view wx:else class="usermsg mb_20">
+          <image class="avatar" src="{{s_userInfo.avatarUrl}}"></image>
+          <view class="nickname mt_20">{{s_userInfo.nickName}}</view>
+        </view>
+    </view>
+    <view class="nav-warp f_32 bg_f">
+        <view class="nav-item p_40 bor_b flex_cb" bindtap='collection'>
+            <view>我的收藏</view>
+            <image class="arrow" src="../../images/last_Dawn.png"></image>
+        </view>
+        <navigator class="nav-item p_40 bor_b flex_cb" url="../../pages/about/about">
+            <view>入驻经纪人</view>
+            <image class="arrow" src="../../images/last_Dawn.png"></image>
+        </navigator>
+        <navigator class="nav-item p_40 bor_b flex_cb" url="../../pages/about/about">
+            <view>我要出租</view>
+            <image class="arrow" src="../../images/last_Dawn.png"></image>
+        </navigator>
+        <view class="nav-item p_40 bor_b flex_cb" bindtap='complaint'>
+            <view>投诉记录</view>
+            <image class="arrow" src="../../images/last_Dawn.png"></image>
+        </view>
+        <navigator class="nav-item p_40 bor_b flex_cb" url="../../pages/about/about" style="border-top:20rpx solid #F2f2f2">
+            <view>联系我们</view>
+            <image class="arrow" src="../../images/last_Dawn.png"></image>
+        </navigator>
+    </view>
+</view>
+

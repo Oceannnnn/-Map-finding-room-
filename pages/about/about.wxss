@@ -1,0 +1,76 @@
+.about-warp {
+    padding: 40rpx 20rpx;
+    background: #fff;
+    height: 100vh;
+}
+
+.about-warp .logo-warp {
+    background: #fff;
+    display: flex;
+    width: 80%;
+    box-shadow: -1px 9px 9px rgba(0, 0, 0, 0.2);
+    justify-content: space-between;
+    padding:20rpx 0;
+    margin: 0 auto 40rpx;
+    flex-direction: column;
+}
+
+.about-warp .logo-warp .left {
+    display: flex;
+    align-items: center;
+    font-size: 36rpx;
+    justify-content: center;
+}
+
+.about-warp .logo-warp .left .logo {
+    width: 100rpx;
+    height: 100rpx;
+    margin-right: 20rpx;
+}
+.contact {
+    margin-top: 100rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10rpx 0;
+    width: 90%;
+}
+.contact .text {
+    font-size: 36rpx;
+    color:#fff;
+}
+
+.contact::after{ 
+    border: none; 
+}
+
+.contact .wx-logo {
+    width: 50rpx;
+    height: 50rpx;
+}
+
+.about-warp .nav-warp {
+    font-size: 32rpx;
+}
+.about-warp .nav-warp .nav-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 40rpx 0;
+}
+
+.about-warp .nav-warp .nav-item .arrow {
+    width: 50rpx;
+    height: 50rpx;
+    margin-left: 20rpx;
+}
+
+.about-warp .nav-warp .nav-item .left {
+    display: flex;
+    align-items: center;
+}
+
+.about-warp .nav-warp .nav-item .left .icon{
+    width: 50rpx;
+    height: 50rpx;
+    margin-right: 20rpx;
+} 

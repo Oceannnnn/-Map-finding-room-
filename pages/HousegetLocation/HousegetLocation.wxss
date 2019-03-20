@@ -1,0 +1,19 @@
+/* pages/HousegetLocation/HousegetLocation.wxss */
+.page{
+  text-align: center;
+}
+.ti{
+  margin-bottom: 30rpx;
+}
+image{
+  margin: 100rpx 0 50rpx;
+  width: 200rpx;
+  height: 200rpx;
+}
+button.s_foot{
+  padding: 10rpx 0;
+  width: 100%;
+}
+.wubi{
+  margin-bottom: 40rpx;
+}

@@ -1,0 +1,167 @@
+/**app.wxss**/
+.p_40{
+  padding: 40rpx;
+}
+.p_20{
+  padding: 20rpx;
+}
+.p_10{
+  padding: 10rpx;
+}
+.c_ea5{
+  color: #EA5D34;
+}
+.c_6f8{
+  color: #6F81BA;
+}
+.b_6f8{
+  background: #6F81BA;
+}
+.flex_j{
+  display: flex;
+  justify-content: center;
+}
+.flex_faj{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.flex_fb{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.flex{
+  display: flex;
+}
+.flex_i{
+  display: flex;
+  align-items: center;
+}
+.flex_ja{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex_cb{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.flex_fa {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.flex_f {
+  display: flex;
+  flex-wrap: wrap;
+}
+.mt_20{
+  margin-top: 20rpx;
+}
+.mb_20{
+  margin-bottom: 20rpx;
+}
+.mb_10{
+  margin-bottom: 10rpx;
+}
+.mb_40{
+  margin-bottom: 40rpx;
+}
+.mt_10{
+  margin-top: 10rpx;
+}
+.ml_20{
+  margin-left: 20rpx;
+}
+.mr_20{
+  margin-right: 20rpx;
+}
+.mr_10{
+  margin-right: 10rpx;
+}
+.bg_f{
+  background: #fff;
+}
+.f_32{
+  font-size: 32rpx;
+}
+.f_28{
+  font-size: 28rpx;
+}
+.f_30{
+  font-size: 30rpx;
+}
+.bor_b{
+  border-bottom: 1px solid #dbdbdb;
+}
+.bor_t{
+  border-top: 1px solid #dbdbdb;
+}
+.bor_l{
+  border-left: 1px solid #dbdbdb;
+}
+.c_999{
+  color: #999;
+}
+.sheng{
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+.arrow{
+  width: 36rpx;
+  height: 36rpx;
+}
+.button{
+  position: fixed;
+  bottom: 0%;
+  left: 0%;
+  width: 100%;
+  padding: 20rpx 0;
+  box-shadow: 1px 1px 6px #6F81BA;
+}
+.room_right{
+  width: 65%;
+  height:180rpx;
+}
+.room_title{
+  font-size: 32rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 20rpx;
+}
+.room_image{
+  width: 30%;
+  height:200rpx;
+  margin-right: 20rpx;
+}
+.room_kan{
+  background: #B797C8;
+  margin-top: 20rpx;
+  display: inline-block;
+  padding: 6rpx;
+}
+.room_money{
+  font-size: 38rpx;
+  color: #FF0000;
+}
+.s_foot{
+  width:90%;
+  color: #fff;
+  background: #6F81BA;
+  font-size: 36rpx;
+  border-radius:10rpx; 
+}
+.zanwu{
+  margin-top: 250rpx;
+  width: 160rpx;
+  height: 160rpx;
+}
+swiper image{
+  width: 100%;
+  height: 100%;
+}

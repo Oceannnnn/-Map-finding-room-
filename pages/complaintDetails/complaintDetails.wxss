@@ -1,0 +1,15 @@
+/* pages/complaintDetails/complaintDetails.wxss */
+.c_image{
+  width: 70rpx;
+  height: 70rpx;
+  padding: 20rpx;
+  border-radius: 50%;
+  border: 1px solid #6F81BA;
+}
+.roomList{
+  margin: 50rpx 0 60rpx;
+  background: #DFDFDF;
+}
+.reasonlist{
+  width: 70%;
+}

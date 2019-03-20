@@ -1,0 +1,25 @@
+/* pages/report/report.wxss */
+.checkbox_con{
+  margin-top: 40rpx;
+}
+.checkbox{
+  padding: 20rpx 0;
+  width: 100%;
+}
+checkbox{
+  margin-right: 10rpx;
+  transform:scale(.7);
+}
+.contact{
+  width: 90%;
+  color: #fff;
+  padding: 10rpx 0;
+  font-size: 32rpx;
+}
+.textarea{
+  border: 1px solid #ccc;
+}
+textarea{
+  width: 100%;
+  height: 200rpx;
+}

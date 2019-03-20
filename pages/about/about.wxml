@@ -1,0 +1,31 @@
+<view class="about-warp">
+    <view class="logo-warp">
+        <view class="left">
+            <image src="{{logo}}" class="logo" />
+            <view class="name">{{name}}</view>
+        </view>
+    </view>
+    <view class="nav-warp">
+        <navigator class="nav-item bor_b" bindtap="toCall">
+            <view class="left">
+                <image class="icon" src="../../images/call.png" />
+                <text>{{phone}}</text>
+            </view>
+            <image class="arrow" src="../../images/last_Dawn.png"></image>
+        </navigator>
+        <navigator class="nav-item bor_b">
+            <view class="left">
+                <image class="icon" src="../../images/website.png" />
+                <text>{{domain}}</text>
+            </view>
+            <image class="arrow" src="../../images/last_Dawn.png"></image>
+        </navigator>
+        <view class="nav-item bor_b" bindtap="toPosition">
+            <view class="left">
+                <image class="icon" src="../../images/position.png" />
+                <text>{{address}}</text>
+            </view>
+            <image class="arrow" src="../../images/last_Dawn.png"></image>
+        </view>
+    </view>
+</view>

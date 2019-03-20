@@ -1,0 +1,27 @@
+/* pages/collection/collection.wxss */
+.news-warp .tab {
+    display: flex;
+    font-size: 34rpx;
+    color:#bfbfbf;
+    padding: 4rpx 20rpx;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+.news-warp .tab .item {
+    padding: 20rpx;
+}
+.news-warp .tab .hover {
+    color:#fff;
+    border-bottom: 2px solid #fff;
+}
+.content image.zanwu{
+  margin-top: 250rpx;
+  width: 160rpx;
+  height: 160rpx;
+}
+.content{
+  margin-top: 96rpx;
+}

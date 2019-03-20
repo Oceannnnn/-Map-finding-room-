@@ -1,0 +1,76 @@
+<!--pages/main/main.wxml-->
+<view>
+  <view class='bor_t flex_i' bindtap='location'>
+    <view class='m_location flex_i'>
+      <image src='../../images/location.png' class='ml_20'></image>
+      {{location}}
+    </view>
+    <view class='i_header'>
+      <view class='i_search flex_ja c_999'>
+        <image src='../../images/search.png'></image>
+        <view>您想住哪儿？</view>
+      </view>
+    </view>
+  </view>
+  <view class='main_header'>
+    <swiper indicator-dots interval="3000" duration="1000" autoplay='true' circular>
+      <block wx:for="{{imgUrls}}" wx:key="{{itemName}}" wx:for-item="itemName">
+        <swiper-item>
+          <image src="{{itemName.image}}" class="slide-image"/>
+        </swiper-item>
+      </block>
+    </swiper>
+    <text>为您打造温馨的家</text>
+  </view> 
+  <view class='flex_j bor_b'>
+    <view class='main_item flex_faj mt_20 mb_20' data-type="1" bindtap='mapHouse'>
+      <image src='../../images/ershou.png'></image>
+      <view>二手房</view>
+    </view>
+    <view class='main_item flex_faj renting_item mt_20 mb_20' data-type="2" bindtap='mapHouse'>
+      <image src='../../images/zu.png'></image>
+      <view>租房</view>
+    </view>
+  </view>
+  <view class='p_20 bor_b'>
+    <view class='flex_cb mb_20'>
+      <view class='mt_20 mb_20'>优秀经纪人</view>
+      <navigator class='flex_i f_32 c_999' url='../about/about'>
+        入驻经纪人
+        <image class="arrow" src="../../images/last_Dawn.png"></image>
+      </navigator>
+    </view>
+    <scroll-view scroll-x="true" class='scroll-view_H'>
+      <view wx:for="{{agentList}}" wx:key="{{itemName}}" wx:for-item="itemName" class='agentList p_20' bindtap="brokerInformation" data-id="{{itemName.id}}">
+        <view class='flex_i'>
+         <image src='{{itemName.image}}'></image>
+          <view class='f_32 ml_20'>
+            <view>{{itemName.nick}}</view>
+            <view class='f_28 c_999 mt_10'>{{itemName.sold_num}}套房源</view>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  <view class='p_20' wx:if="{{recommendList!=''}}">
+    <view class='mb_20 mt_20'>为你推荐</view>
+    <view wx:for="{{recommendList}}" wx:key="{{itemName}}" wx:for-item="itemName" class='roomList flex_i p_20 bor_b' data-id="{{itemName.id}}" data-type="1" bindtap='roomDetails'>
+      <image src='{{itemName.image}}' class='room_image'></image>
+      <view class='room_right flex_fb'>
+        <view>
+          <view class='room_title'>{{itemName.name}}</view>
+          <view class='f_28'>
+            {{itemName.house_type_room}}|{{itemName.area}}|{{itemName.catename}}
+          </view>
+        </view>
+        <view class='room_money'>
+          {{itemName.money}}<text class='f_28 c_999 ml_20'>{{itemName.createtime}}</text> 
+        </view>
+      </view>
+    </view>
+    <view class='room_more' bindtap='recommend'>
+      查看更多房源
+    </view>
+  </view>
+  <navigator class='flex_fa f_28 p_40' target="miniProgram" open-type="navigate" appId="wx1773ca9a5221af5b">技术支持 @ 风擎网络科技</navigator>
+</view>

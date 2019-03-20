@@ -1,0 +1,48 @@
+<!--pages/villageDetails/villageDetails.wxml-->
+<import src="../../wxParse/wxParse.wxml"/>
+<swiper indicator-dots
+  autoplay interval="3000" duration="500" circular>
+  <block wx:for="{{details.swiper_json}}" wx:key="{{itemName}}" wx:for-item="itemName">
+    <swiper-item>
+      <image src="{{itemName}}" class="slide_image"/>
+    </swiper-item>
+  </block>
+</swiper>
+<view class='p_40 flex_cb bor_b'>
+  <view>
+    {{details.name}}
+    <view class='f_28 mt_20'>{{details.address}}</view>
+  </view>
+  <view class='c_ea5 jun flex_fa'>
+    {{details.money}}
+    <view class='f_28 c_999 mt_20'>参考均价</view>
+  </view>
+</view>
+<view class='bor_b p_20'>
+  <view class='jianjie'>小区简介</view>
+  <view class='jian_con'>
+    <view class='content f_32'>
+      <template is="wxParse" data="{{wxParseData:villageDetails.nodes}}" />
+    </view>
+  </view>
+</view>
+<view wx:if="{{recommendList!=''}}">
+  <view class='p_40'>小区房源</view>
+  <view wx:for="{{recommendList}}" wx:key="{{itemName}}" wx:for-item="itemName" class='roomList flex_i p_20 bor_b' data-id="{{itemName.id}}" data-type="{{type}}" bindtap='roomDetails'>
+    <image src='{{itemName.image}}' class='room_image'></image>
+    <view class='room_right flex_fb'>
+      <view>
+        <view class='room_title'>{{itemName.name}}</view>
+        <view class='f_28' wx:if="{{type==1}}">
+          {{itemName.house_type_room}}|{{itemName.area}}|{{itemName.catename}}
+        </view>
+        <view class='f_28' wx:else>
+          {{itemName.house_type}}|{{itemName.catename}}
+        </view>
+      </view>
+      <view class='room_money'>
+        {{itemName.money}}<text class='f_28 c_999 ml_20'>{{itemName.createtime}}</text> 
+      </view>
+    </view>
+  </view>
+</view>

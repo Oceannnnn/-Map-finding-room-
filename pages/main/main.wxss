@@ -1,0 +1,93 @@
+/* pages/main/main.wxss */
+.i_header{
+  padding: 20rpx 0;
+  width: 80%;
+  background: #fff;
+  font-size: 28rpx;
+}
+.m_location{
+  width: 20%;
+  text-align: center;
+  font-size: 30rpx;
+  padding: 20rpx 0;
+  justify-content: center;
+}
+.i_search{
+  width: 90%;
+  margin: 0 auto;
+  border: 1px solid #333;
+  border-radius: 10rpx;
+  padding: 10rpx;
+}
+.i_search image,.m_location image{
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 10rpx;
+}
+.main_header{
+  letter-spacing: 2px;
+  text-align: center;
+  position: relative;
+}
+swiper{
+  height:400rpx; 
+}
+swiper image{
+  width: 100%;
+  height: 100%;
+}
+.main_header text{
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 30%;
+  left: 0;
+  padding: 30rpx 0;
+  color: #fff;
+}
+.main_item{
+  padding: 20rpx;
+  width: 30%;
+  margin-top: 20rpx;
+  color: #333;
+  font-size: 32rpx;
+}
+.main_item image{
+  width: 50rpx;
+  height: 50rpx;
+  margin-bottom: 30rpx;
+  padding: 40rpx;
+  box-shadow: 1px 1px 9px #97A3C8;
+  background: #97A3C8;
+  border-radius: 50%;
+}
+.renting_item image{
+  background: #B797C8;
+  box-shadow: 1px 1px 9px #B797C8;
+}
+.scroll-view_H{
+  white-space:nowrap;
+  width: 100%;
+  box-sizing: border-box;
+}
+.agentList{
+  padding: 20rpx 30rpx;
+  border: 1px solid #eee;
+  display:inline-block;
+  margin-right: 40rpx;
+  position: relative;
+}
+.agentList image{
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 50%;
+}
+.room_more{
+  padding: 30rpx 0;
+  font-size: 32rpx;
+  color: #6F81BA;
+  text-align: center;
+  background: #eee;
+  width: 90%;
+  margin: 40rpx auto 0;
+}

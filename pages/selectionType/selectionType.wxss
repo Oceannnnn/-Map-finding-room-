@@ -1,0 +1,45 @@
+/* pages/selectionType/selectionType.wxss */
+page{
+  font-size: 36rpx;
+  margin-bottom: 100rpx;
+}
+.item{
+  margin: 10rpx;
+  background: #F3F3F3;
+  color: #333;
+  position: relative;
+  text-align: center;
+  padding: 30rpx 40rpx;
+}
+.item.active{
+  background: rgba(190, 146, 214, 0.3);
+  color: #7082BA;
+}
+.gou{
+  position: absolute;
+  width: 50rpx;
+  height: 50rpx;
+  bottom: 0;
+  right: 0;
+}
+.gou.active{
+  display: none;
+}
+.footer{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  font-size: 36rpx;
+  text-align: center;
+}
+.cancel{
+  padding: 30rpx 0;
+  width: 30%;
+  background: #FEFDFE;
+}
+.confirm{
+  padding: 30rpx 0;
+  width: 70%;
+  color: #fff;
+}

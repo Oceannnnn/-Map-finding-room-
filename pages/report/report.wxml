@@ -1,0 +1,20 @@
+<!--pages/report/report.wxml-->
+<view class='p_40'>
+  <view class='c_999'>举报原因</view>
+  <view class='checkbox_con f_32'>
+    <checkbox-group bindchange="checkboxChange">
+      <label class="checkbox flex_i" wx:for="{{items}}" wx:key="{{items}}">
+        <checkbox value="{{item.id}}"/>{{item.reason}}
+      </label>
+    </checkbox-group>
+  </view>
+  <view wx:if="{{other}}" class='p_20 textarea'>
+    <textarea bindinput="bindTextAreaBlur" maxlength="-1" placeholder='请输入原因' class='f_32'></textarea>
+  </view>
+</view>
+<view class='button flex_fa bg_f'>
+  <button class="contact b_6f8" bindtap='submission'>
+    提交
+  </button>
+</view>
+

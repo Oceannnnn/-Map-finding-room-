@@ -1,0 +1,69 @@
+/* pages/brokerInformation/brokerInformation.wxss */
+.page{
+  position: relative;
+  height: 530rpx;
+}
+.broker_top{
+  background: #fff;
+  border-radius: 10rpx;
+  box-shadow: 1px 1px 8px #999;
+  width: 80%;
+  z-index: 100;
+  position: absolute;
+  top: 20rpx;
+  left: 5%;
+}
+.broker_header image{
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 50%;
+  margin: 0 20rpx 10rpx 0;
+}
+.broker_header text{
+  border: 1px solid #6F81BA;
+  padding: 5rpx;
+  border-radius: 10rpx;
+  margin-left: 10rpx;
+}
+.broker_bottom{
+  width: 100%;
+  height: 350rpx;
+  position: absolute;
+  top: 200rpx;
+}
+.brokeritem{
+  width: 50%;
+  margin-top: 156rpx;
+}
+.contact {
+  width: 90%;
+  font-size: 36rpx;
+  color:#FFF;
+}
+.broker_footer{
+  margin: 30rpx 0 140rpx;
+}
+.nav-scroll{
+  width: 100%;
+  color: #BDBABB;
+  background: #fff;
+}
+.scroll-view_H{
+  white-space:nowrap;
+  width: 100%;
+  box-sizing: border-box;
+}
+.nav-name{
+  display:inline-block;
+  border-bottom: 2px solid transparent;
+  width: 50%;
+  text-align: center;
+  padding: 30rpx 0;
+}
+.nav-hover{
+  color: #6F81BA;
+  border-bottom: 2px solid #6F81BA;
+}
+.zanwu {
+  margin-top: 80rpx;
+}

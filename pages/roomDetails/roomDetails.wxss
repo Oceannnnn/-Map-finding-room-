@@ -1,0 +1,68 @@
+/* pages/roomDetails/roomDetails.wxss */
+@import "../../wxParse/wxParse.wxss";
+swiper{
+  height: 400rpx;
+}
+.slide_image{
+  height: 100%;
+  width: 100%;
+}
+.details_shou{
+  padding: 20rpx 0;
+}
+.shou_item{
+  width: 50%;
+  font-size: 32rpx;
+}
+.details_s view{
+  width: 50%;
+}
+.details_s view.shoufu{
+  width: 100%;
+}
+.warn,.collect{
+  width: 40rpx;
+  height: 40rpx;
+}
+.map-wrap {
+  display: flex;
+  flex-direction:column;
+  flex:1;
+  width: 100%;
+}
+.map-wrap map{
+  display:block;
+  flex:1;
+  height:360rpx;
+  width: 100%;
+}
+.jing{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}
+.guess_like{
+  margin-bottom: 140rpx;
+}
+.collect_h{
+  width: 20%;
+}
+.contact{
+  width: 70%;
+  font-size: 32rpx;
+  color: #fff;
+  padding: 10rpx 0;
+}
+.content{
+  padding: 20rpx;
+  overflow: scroll;
+  max-height: 600rpx;
+}
+.details_name{
+  width: 88%;
+  font-size: 34rpx;
+}
+.map-img{
+  width: 100%;
+  height: 400rpx;
+}

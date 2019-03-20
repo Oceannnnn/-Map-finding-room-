@@ -1,0 +1,61 @@
+<!--pages/brokerInformation/brokerInformation.wxml-->
+<view class='b_6f8 page'>
+  <view class='p_40 broker_top'>
+    <view class='broker_header flex_i'>
+      <image src='{{brokerInformation.image}}'></image>
+      <view>
+        {{brokerInformation.nick}} <text class='f_28 c_6f8'>经纪人</text>
+      </view>
+    </view>
+    <view class='f_28 c_999 mt_20'>在售房源 <text class='c_ea5'>{{brokerInformation.sold_num}}</text>套</view>
+    <view class='f_28 c_999 mt_20'>在租房源 <text class='c_ea5'>{{brokerInformation.num}}</text>套</view>
+  </view>
+  <view class='bg_f broker_bottom flex_i f_32 bor_b'>
+    <view class='brokeritem flex_fa'>
+      房源质量
+      <view class='mt_10'>{{brokerInformation.quality}}</view>
+      <view class='f_28 c_999 mt_10'>高于同行 <text class='c_ea5'>{{brokerInformation.above_q}}</text></view>
+    </view>
+    <view class='brokeritem flex_fa'>
+      服务效率
+      <view class='mt_10'>{{brokerInformation.service}}</view>
+      <view class='f_28 c_999 mt_10'>高于同行 <text class='c_ea5'>{{brokerInformation.above_s}}</text></view>
+    </view>
+  </view>
+</view>
+<view class='broker_footer'>
+  <view class="nav-scroll f_32">
+    <view class="scroll-view_H">
+      <text wx:for="{{HeaderList}}" wx:key="item" data-id="{{item.id}}" bindtap='toList' class="nav-name {{item.id == currentId ? 'nav-hover' : ''}}">{{item.name}}</text>
+    </view>
+  </view>
+  <view wx:if="{{recommendList!=''}}">
+   <view wx:for="{{recommendList}}" wx:key="{{itemName}}" wx:for-item="itemName" class='roomList flex_i p_20 bor_b' data-id="{{itemName.id}}" data-type="{{type}}" bindtap='roomDetails'>
+      <image src='{{itemName.image}}' class='room_image'></image>
+      <view class='room_right flex_fb'>
+        <view>
+          <view class='room_title'>{{itemName.name}}</view>
+          <view class='f_28' wx:if="{{type==1}}">
+            {{itemName.house_type_room}}|{{itemName.area}}|{{itemName.catename}}
+          </view>
+          <view class='f_28' wx:else>
+            {{itemName.house_type}}|{{itemName.catename}}
+          </view>
+        </view>
+        <view class='room_money'>
+          {{itemName.money}}<text class='f_28 c_999 ml_20'>{{itemName.createtime}}</text> 
+        </view>
+      </view>
+    </view>
+  </view>
+  <view wx:else class='flex_fa c_999 f_32'>
+    <image src='../../images/zanwu.png' class='zanwu mb_20'></image>
+    暂无数据
+  </view>
+</view>
+<view class='button flex_fa bg_f'>
+  <button class="contact b_6f8" data-call="{{brokerInformation.mobile}}" bindtap='contact'>
+    电话联系
+  </button>
+</view>
+

@@ -1,0 +1,9 @@
+/* pages/villageDetails/villageDetails.wxss */
+@import "../../wxParse/wxParse.wxss";
+@import "../roomDetails/roomDetails.wxss";
+.jun{
+  justify-content: flex-end;
+}
+.jianjie{
+  font-size: 36rpx;
+}

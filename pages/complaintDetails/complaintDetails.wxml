@@ -1,0 +1,37 @@
+<!--pages/complaintDetails/complaintDetails.wxml-->
+<view class='p_20'>
+  <view class='flex_fa mt_20'> 
+    <image src='../../images/jubao2.png' class='c_image'></image>
+    <text class='mt_20 f_32'>{{details.check}}</text>
+    <text class='mt_10 f_28 c_999'>{{details.create_time}}</text>
+  </view>
+  <view class='roomList flex_i p_20' data-id="{{details.house.id}}" data-type="{{type}}" bindtap='roomDetails'>
+    <image src='{{details.house.image}}' class='room_image'></image>
+    <view class='room_right flex_fb'>
+      <view>
+        <view class='room_title'>{{details.house.name}}</view>
+        <view class='f_28' wx:if="{{type==1}}">
+          {{details.house.house_type_room}}|{{details.house.area}}|{{details.house.catename}}
+        </view>
+        <view class='f_28' wx:else>
+          {{details.house.house_type}}|{{details.house.catename}}
+        </view>
+      </view>
+      <view class='room_money'>
+        {{details.house.money}}<text class='f_28 c_999 ml_20'>{{details.house.createtime}}</text> 
+      </view>
+    </view>
+  </view>
+  <view class='mb_40 f_32'>
+   <text class='c_999'>举报类型：</text>{{details.type}}
+  </view>
+  <view class='mb_40 f_32 flex'>
+   <text class='c_999'>举报原因：</text>
+   <view class='reasonlist'>
+     <view wx:for="{{details.reasonlist}}" wx:key="{{details.reasonlist}}" class='mb_10'>{{item}}</view> 
+   </view>
+  </view>
+  <view class='mb_40 f_32'>
+   <text class='c_999'>其他：</text>{{details.content}}
+  </view>
+</view>

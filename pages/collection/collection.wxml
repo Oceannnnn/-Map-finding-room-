@@ -1,0 +1,31 @@
+<!--pages/collection/collection.wxml-->
+<view class="news-warp">
+  <view class="tab b_6f8">
+      <view data-num="{{index}}" class="item {{hoverIndex === index + 1?'hover':''}}" bindtap="tabClick" wx:for="{{tab}}" wx:key="{{index}}">
+          {{item.title}}
+      </view>
+  </view>
+  <view class='content' wx:if="{{list!=''}}">
+    <view wx:for="{{list}}" wx:key="{{itemName}}" wx:for-item="itemName" class='roomList flex_i p_20 bor_b' data-id="{{itemName.id}}" data-type="{{type}}" bindtap='roomDetails'>
+      <image src='{{itemName.image}}' class='room_image'></image>
+      <view class='room_right flex_fb'>
+        <view>
+          <view class='room_title'>{{itemName.name}}</view>
+          <view class='f_28' wx:if="{{type==1}}">
+            {{itemName.house_type_room}}|{{itemName.area}}|{{itemName.catename}}
+          </view>
+          <view class='f_28' wx:else>
+            {{itemName.house_type}}|{{itemName.catename}}
+          </view>
+        </view>
+        <view class='room_money'>
+          {{itemName.money}}<text class='f_28 c_999 ml_20'>{{itemName.createtime}}</text> 
+        </view>
+      </view>
+    </view>
+  </view>
+  <view wx:else class='flex_fa c_999 f_32'>
+    <image src='../../images/zanwu.png' class='zanwu mb_20'></image>
+    暂无收藏
+  </view>
+</view>

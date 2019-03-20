@@ -1,0 +1,14 @@
+/* pages/complaint/complaint.wxss */
+@import "../collection/collection.wxss";
+.content_right{
+  width: 70%;
+  margin-left: 20rpx;
+  font-size: 32rpx;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.content_left{
+  width: 28%;
+  height: 150rpx;
+}

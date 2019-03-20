@@ -1,0 +1,27 @@
+<!--pages/details/details.wxml-->
+<view class='flex_cb p_40 bor_b' bindtap='villageDetails' data-id="{{id}}" data-type="{{type}}">
+  <view class='flex_fa'>
+  {{village.name}}
+  <text class='f_32 c_999 mt_20'>{{village.city}}-{{village.town}}</text>
+  </view>
+  <image class="arrow" src="../../images/last_Dawn.png"></image>
+</view>
+<view wx:if="{{recommendList!=''}}">
+  <view wx:for="{{recommendList}}" wx:key="{{itemName}}" wx:for-item="itemName" class='roomList flex_i p_20 bor_b' data-id="{{itemName.id}}" data-type="{{type}}" bindtap='roomDetails'>
+    <image src='{{itemName.image}}' class='room_image'></image>
+    <view class='room_right flex_fb'>
+      <view>
+        <view class='room_title'>{{itemName.name}}</view>
+        <view class='f_28' wx:if="{{type==1}}">
+          {{itemName.house_type_room}}|{{itemName.area}}|{{itemName.catename}}
+        </view>
+        <view class='f_28' wx:else>
+          {{itemName.house_type}}|{{itemName.catename}}
+        </view>
+      </view>
+      <view class='room_money'>
+        {{itemName.money}}<text class='f_28 c_999 ml_20'>{{itemName.createtime}}</text> 
+      </view>
+    </view>
+  </view>
+</view>

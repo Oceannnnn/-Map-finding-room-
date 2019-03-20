@@ -1,0 +1,16 @@
+<!--pages/recommend/recommend.wxml-->
+<view class='bor_t'>
+  <view wx:for="{{recommendList}}" wx:key="{{itemName}}" wx:for-item="itemName" class='roomList flex_i p_20 bor_b' data-id="{{itemName.id}}" data-type="1" bindtap='roomDetails'>
+    <image src='{{itemName.image}}' class='room_image'></image>
+    <view class='room_right'>
+      <view class='room_title'>{{itemName.name}}</view>
+      <view class='f_28'>
+        {{itemName.house_type_room}}|{{itemName.area}}|{{itemName.catename}}
+      </view>
+      <text class='room_kan f_28 c_6f8'>随时看房</text>
+      <view class='room_money'>
+        {{itemName.money}}<text class='f_28 c_999 ml_20'>{{itemName.createtime}}</text> 
+      </view>
+    </view>
+  </view>
+</view>

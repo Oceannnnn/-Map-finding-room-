@@ -1,0 +1,99 @@
+<!--pages/roomDetails/roomDetails.wxml-->
+<import src="../../wxParse/wxParse.wxml"/>
+<swiper indicator-dots
+  autoplay interval="3000" duration="500" circular>
+  <block wx:for="{{details.swiper_json}}" wx:key="{{itemName}}" wx:for-item="itemName">
+    <swiper-item>
+      <image src="{{itemName}}"/>
+    </swiper-item>
+  </block>
+</swiper>
+<view class='p_20'>
+  <view class='p_20 flex_cb f_30 bor_b'>
+    <view class='details_name'>
+      <view>{{details.name}}</view>
+      <view class='c_ea5 mt_10' hidden="{{type==1?'hidden':''}}">{{details.money}} <text class='f_28 c_999'>房租（月付价）</text> </view>
+    </view>
+    <view class='flex_fa c_ea5 f_28' bindtap='warn' data-id='{{details.id}}' data-type="{{type}}">
+      <image src='../../images/warn.png' class='warn mb_10'></image>
+      举报
+    </view>
+  </view>
+  <view class='details_shou flex_i bor_b mt_20' hidden="{{type==1?'':'hidden'}}">
+    <view class='shou_item flex_fa'>
+      <text class='f_28 c_999 mb_10'>售价</text> 
+      <view class='c_ea5'>{{details.money}}</view>
+    </view>
+    <view class='shou_item bor_l flex_fa'>
+      <text class='f_28 c_999 mb_10'>户型</text> 
+      <view class='c_ea5'>{{details.house_type_room}}{{details.house_type_hall}}{{details.house_type_toilet}}</view>
+    </view>
+  </view>
+  <view class='f_32 p_20 details_s flex_f bor_b' wx:if="{{type==1}}">
+    <view class='mb_20'><text class='c_999 mr_20'>面积</text>{{details.area}}</view>
+    <view class='mb_20'><text class='c_999 mr_20'>朝向</text>{{details.direction}}</view>
+    <view class='mb_20'><text class='c_999 mr_20'>楼层</text>{{details.floor}}</view>
+    <view class='mb_20'><text class='c_999 mr_20'>电梯</text>{{details.elevator}}</view>
+    <view class='mb_20'><text class='c_999 mr_20'>装修</text>{{details.decoration}}</view>
+    <view class='mb_20'><text class='c_999 mr_20'>楼龄</text>{{details.age}}</view>
+  </view>
+  <view class='f_32 p_20 details_s flex_f bor_b' wx:else>
+    <view class='mb_20'><text class='c_999 mr_20'>户型</text>{{details.house_type}}</view>
+    <view class='mb_20'><text class='c_999 mr_20'>房屋类型</text>{{details.room_type}}</view>
+    <view class='mb_20'><text class='c_999 mr_20'>朝向</text>{{details.direction}}</view>
+    <view class='mb_20'><text class='c_999 mr_20'>电梯</text>{{details.elevator}}</view>
+    <view class='mb_20'><text class='c_999 mr_20'>出租方式</text>{{details.type}}</view>
+  </view>
+</view>
+<view class='flex_cb p_20' bindtap='villageDetails' data-id='{{details.cateid}}' data-type='{{type}}'>
+  {{details.catename}}
+  <view class='f_28 c_999 flex_i'>
+    查看详情
+    <image class="arrow ml_20" src="../../images/last_Dawn.png"></image>
+  </view>
+</view>
+<view class='map-wrap mt_20'>
+  <!-- <map id='myMap' data-latitude="{{details.latitude}}" data-longitude='{{details.longitude}}' data-address="{{details.address}}" data-name="{{details.name}}" latitude='{{details.latitude}}' longitude='{{details.longitude}}' markers='{{markers}}' scale='16'  bindtap='mapLocation'></map> -->
+  <image src='{{details.map_image}}' class='map-img' bindtap='mapLocation' data-latitude="{{details.latitude}}" data-longitude='{{details.longitude}}' data-address="{{details.address}}" data-name="{{details.name}}" latitude='{{details.latitude}}'></image>
+</view>
+<view>
+  <view class='p_20'>
+    房源介绍
+  </view>
+  <view class='content {{content_on}} f_32'>
+    <template is="wxParse" data="{{wxParseData:roomDetails.nodes}}" />
+  </view>
+</view>
+<view class='flex_cb p_20 bor_t' data-id='{{details.mediation.id}}' bindtap='mediation'>
+  经纪人带看
+  <image src="{{details.mediation.image}}" class='jing mr_20'></image>
+</view>
+<view class='guess_like bor_t' wx:if="{{recommendList!=''}}">
+  <view class='p_20'>猜你喜欢</view>
+  <view wx:for="{{recommendList}}" wx:key="{{itemName}}" wx:for-item="itemName" class='roomList flex_i p_20 bor_b' data-id="{{itemName.id}}" data-type="{{type}}" bindtap='roomDetails'>
+    <image src='{{itemName.image}}' class='room_image'></image>
+    <view class='room_right flex_fb'>
+      <view>
+        <view class='room_title'>{{itemName.name}}</view>
+        <view class='f_28' wx:if="{{type==1}}">
+          {{itemName.house_type_room}}|{{itemName.area}}|{{itemName.catename}}
+        </view>
+        <view class='f_28' wx:else>
+          {{itemName.house_type}}|{{itemName.catename}}
+        </view>
+      </view>
+      <view class='room_money'>
+        {{itemName.money}}<text class='f_28 c_999 ml_20'>{{itemName.createtime}}</text> 
+      </view>
+    </view>
+  </view>
+</view>
+<view class='button f_32 bg_f flex_i'>
+  <view class='flex_fa f_28 collect_h' bindtap='collect' data-islike="{{islike}}">
+    <image src="../../images/collect{{islike == true?'_active':''}}.png" class='collect mb_20'></image>
+    收藏
+  </view>
+  <button class="contact b_6f8" bindtap='contact' data-mobile="{{details.mediation.mobile}}">
+    联系经纪人
+  </button>
+</view>

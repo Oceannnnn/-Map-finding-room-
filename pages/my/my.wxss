@@ -1,0 +1,36 @@
+/* pages/my/my.wxss */
+.top-info .avatar {
+    width: 160rpx;
+    height: 160rpx;
+    border-radius: 50%;
+}
+.nav-warp .nav-item .arrow {
+    width: 36rpx;
+    height: 36rpx;
+}
+.top-info button{
+  border-radius: 50%;
+  width: 180rpx;
+  height: 180rpx;
+  font-size: 32rpx;
+  line-height: 180rpx;
+}
+.usermsg{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.nickname{
+  color: #fff;
+}
+.jishu{
+  width: 100%;
+  text-align: center;
+  font-size: 34rpx;
+  position: absolute;
+  bottom: 3%;
+}
+.jishu text{
+  border-bottom: 1px solid #333;
+  padding: 10rpx 0;
+}
